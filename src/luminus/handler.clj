@@ -38,9 +38,9 @@
 
 (defroutes app-routes
  (GET "/" [] (render "home.html"))
- (GET "/docs" [] (doc-page "guestbook.md"))
+ (GET "/docs" [] (doc-page "guestbook.ja.md"))
  (GET "/docs/:doc" [doc] (doc-page doc))
- (GET "/contribute" [] (render "contribute.html" {:content (util/slurp-resource "md/contributing.md")}))
+ (GET "/contribute" [] (render "contribute.html" {:content (util/slurp-resource "md/contributing.ja.md")}))
  (route/resources "/")
  (route/not-found (render "404.html")))
 
